@@ -1,0 +1,513 @@
+html {scroll-behavior: smooth;}
+.full-web{font-family: 'Nunito';}
+.color-gray{ color: #666666;}
+.color-A1{color: #838282;}
+.color-E{color: #EEEEEE;}
+.mixed-red{color: #ff3838;}
+.bg-f7{background-color: #f7f7f7;}
+.color-FF{color: #FFFFFF;}
+.bgc-FF{background-color: #FFFFFF;}
+p, a{font-family: Arial, Helvetica, sans-serif;}
+
+.container-fixed{
+    width: 1300px;
+    margin: 0 auto; 
+}
+.container-service{
+    width: 1450px;
+    margin: 0 auto; 
+}
+.border-shadow{
+    border: 1px solid #b4b3b3;
+    border-radius: 6px;
+    box-shadow: 0px 3px 15px #cfcfcf;
+    background-color: white;
+}
+.t-selection::selection{
+    color: white;
+    background: #ff3838;
+}
+/* ***************beganing css************* */
+.header{
+    box-shadow: 0px 10px 15px #EBEBEB;  
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+.menu{margin-top: 8px;}
+
+.logo {margin-top: 15px;}
+
+.logo a{
+    font-weight: 700;
+    font-size: 26px;
+}
+.logo a:hover{
+    text-decoration: none;
+}
+/* *****Menu****** */
+.menu ul li{
+    display: inline-block;
+}
+.menu ul li a{
+    text-decoration: none;
+    display: block;
+    color: #666666;
+    font-size: 22px;
+    padding: 10px;
+    transition: .4s;
+}
+.menu ul li a:hover { color: #ff3838; }
+
+/* <!-- ************************Banner*************************** --> */
+.banner{ 
+    background-image: url(./images/banner.jpg);
+    background-size: cover;
+    padding: 300px 0;
+    background-attachment: scroll;
+}
+.banner-text{
+    text-transform: capitalize;
+}
+.banner-text h1{
+    font-size: 50px;  
+}
+.banner-text p{
+    font-size: 18px; 
+}
+
+
+.banner-image img{
+    position: absolute;
+    width: 600px;
+    height: auto;
+    margin-top: -190px;  
+    animation: tata 1s linear infinite;
+}
+@keyframes tata{
+    100%{
+        transform: translateY(-10px);      
+}
+50% {
+    transform: translateY(10px);
+    
+}  0%{
+    transform: translateY(-10px); 
+}
+}
+/* **********button********** */
+.button{
+    border: 2px solid #ff3838;
+    display: inline-block;
+    font-size: 18px;
+    padding: 6px 30px;
+    border-radius: 5px;
+    position: relative;
+    transition: .5s;
+    z-index: 1; 
+    font-weight: 300;
+}
+
+.button:hover a{
+    color: #F7F7F7;
+    text-decoration: none;
+}
+.button::before{
+    content: "";
+    background: #ff3838;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height:100%;
+    visibility: hidden;
+    transition: .5s; 
+    z-index: -1;
+    cursor: pointer;
+}
+.button:hover::before{
+    width: 100%;
+    left:  0; 
+    visibility: visible;   
+}
+
+/* <!-- ************************speciality*************************** --> */
+
+.first-box{
+    border-bottom: 11px solid #F7F7F7;
+    max-width: 24%;
+    position: relative;
+    overflow: hidden;
+}
+.box-content{
+    transition: .5s;
+}
+.first-box:hover .box-content{
+    transform: translateY(280px);
+}
+.hover-image img{
+    max-width: 100%;
+    height: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    transform: scale(1.5) translateY(-300px);
+    visibility: hidden;
+    transition: .6s;
+}
+.first-box:hover .hover-image img{
+    visibility: visible;
+    transform:  scale(1.5) translateY(12px);
+}
+
+.first-box:nth-child(4){
+    border-bottom: none;
+}
+
+/* *************Speciality 2 box***************** */
+
+.tow-box{
+    border-bottom: 60px solid #F7F7F7;
+    position: relative;
+    overflow: hidden;
+    max-width: 49.2%;
+}
+.tow-content{
+    transition: .5s;
+}
+.tow-box:hover .tow-content{
+    transform: translateY(280px);
+}
+.hover-image-tow img{
+    max-width: 100%;
+    height: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    transform: scale(1.5) translateY(-500px);
+    visibility: hidden;
+    transition: .6s;
+}
+.tow-box:hover .hover-image-tow img{
+    visibility: visible;
+    transform:  scale(1.2) translateY(-70px);
+    transition: .6s;
+}
+.tow-box:nth-child(2n){
+    border-bottom: none;
+}
+
+ /* ********************Popular************************ */ 
+
+ .popular h1::selection{
+    color: white;
+    background: #ff3838;
+}
+.popular-1st-box{
+    max-width: 24%;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 20px;
+}
+.popular-1st-box img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    transform: translateY(35px) scale(1.0, 1.2);
+}
+.pricec-tag{
+    background-color: #ff3838;
+    padding: 7px 15px;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 1;
+    top: 30px;
+    left: 25px;
+}
+.pricec-tag a{
+    display: inline-block;
+    color: #F7F7F7;
+    font-weight: 200;
+    font-size: 16px;
+    display: inline-block;
+}
+.star{
+    padding-bottom: 10px;
+    display: block;
+}
+
+ /* ********************Popular-tow-box************************ */ 
+ .popular-tow-boxx{
+    position: relative;
+    overflow: hidden;
+    max-width: 49.3%;
+}
+.popular-tow-boxx img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    transform: translateY(-40px) scale(1.0, 0.7);
+}
+.popular-tow-boxx h4{
+    margin-top: -90px;
+}
+
+/* ********************Service-Section************************ */
+
+.service-description img{
+    border: 10px solid #FFFFFF;
+    border-radius: 50%;
+    box-shadow: 0 5px 10px 5px #E9E9E9;
+    transition: .5s;
+}
+.service-description img:hover{
+    box-shadow: 0px 8px 18px red;
+    transform: scale(0.7, 0.7);
+}
+.service-description h1{
+    width: 320px;
+    font-size: 28px;
+    margin-top: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* ***************button-food*************************** */
+.button-food{
+    border: 1px solid #ff3838;
+    display: inline-block;
+    font-size: 11px;
+    padding: 5px 19px;
+    border-radius: 5px;
+    position: relative;
+    transition: .8s;
+    z-index: 1; 
+    font-weight: 600;
+}
+.button-food:hover a{
+    color: #F7F7F7;
+    text-decoration: none;
+}
+.button-food::before{
+    content: "";
+    background: #ff3838;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height:100%;
+    visibility: hidden;
+    transition: .8s; 
+    z-index: -1;
+    cursor: pointer;
+}
+.button-food:hover::before{
+    width: 100%;
+    left:  0; 
+    visibility: visible;   
+}
+
+/* <!--------------- food-gallery ------------------> */
+
+.white-border{
+    border: 13px solid white;
+    box-shadow: 0 10px 15px #cecdcd;
+    border-radius: 5px;
+}
+.first-boxs{
+    height: 270px;
+    background-size: cover;
+    background-position: center;
+    transition: .6s;
+    position: relative;
+    overflow: hidden;
+    max-width: 23.7%;
+
+}
+.first-boxs img{
+    margin-top: -8px;
+    margin-left: -20px;
+    width: 120%; 
+    transform: scale(1, 1.4);
+}
+.hover-text{
+    max-width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    transform: scale(1.5) translateY(-500px);
+    visibility: hidden;
+    transition: .5s;
+    background: rgba(250, 248, 248, 0.8);
+    height: 110%;   
+}
+.hover-text p{
+    width: 160px;
+    text-align: center;
+    display: inline-block;
+    font-size: 11px;
+}
+.hover-text h5{
+    font-size: 18px;
+    font-weight: 800;
+}
+.first-boxs:hover .hover-text{
+    visibility: visible;
+    transform:  scale(1.5) translateY(-110px);
+    
+}
+
+/* <!--------------- Last-food-gallery ------------------> */
+.first-boxss{
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    transition: .6s;
+    position: relative;
+    overflow: hidden;
+    max-width: 99%;
+}
+
+.first-boxss img{
+    transform: scale(2.5) translateY(-30px);
+}
+.hover-textt{
+    max-width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    transform: scale(1.5) translateY(-500px);
+    visibility: hidden;
+    transition: .5s;
+    background: rgba(250, 248, 248, 0.8);
+    height: 110%;
+}
+.hover-textt p{
+    text-align: center;
+    display: inline-block;
+    font-size: 11px;
+}
+.hover-textt h5{
+    font-size: 18px;
+    font-weight: 800;
+}
+.first-boxss:hover .hover-textt{
+    visibility: visible;
+    transform:  scale(1.5) translateY(-200px);   
+}
+
+/* <!------------------------------- Customers -------------------------------> */
+
+.customer-rev img{
+    width: 150px;
+    height: auto;
+    border: 13px solid #FFFFFF;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    transform: translate(110px, -75px);
+    box-shadow: 0px -4px 8px #e2e2e2;  
+}
+.reviews{
+    background-color: #333333;
+    position: relative; 
+}
+.reviews h4{
+    color: #FFFFFF;
+    text-align: center; 
+    padding-top: 80px;
+}
+.reviews p{
+    padding: 0 20px;
+    text-align: center;
+    font-size: 14px;
+}
+.star{
+    font-size: 18px;
+}
+/* --------------Order-------------------- */
+
+.order-form{
+    background-color: #FFFFFF;
+    box-shadow: 0 10px 20px #bbbbbb;
+    border-radius: 6px;
+    margin-bottom: 18px ;
+}
+
+.order-form img{
+    width: 500px;
+    height: auto;
+    padding: 35px 15px; 
+    animation: tata 1s linear infinite;
+}
+@keyframess tata{
+    100%{
+        transform: translateX(18px);      
+}
+50% {
+    transform: translateX(-2px);
+    
+}  0%{
+    transform: translateY(-5px); 
+}
+}
+
+input{
+    width: 49%;
+    padding: 10px 10px;
+    border-radius: 6px;
+    border: none;
+    border: 1px solid #bbbbbb;
+    color: #ff3838;
+}
+textarea{
+    width: 100%;
+    height: 150px;
+    padding: 10px 10px;
+    border-radius: 6px;
+    border: none;
+    border: 1px solid #bbbbbb;
+    color: #ff3838
+}
+::placeholder{
+    color: #a7a6a6;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* **************Footer************** */
+.footer{
+    background: #000;
+    padding-bottom: 0px;
+    padding: 15px 0;
+}
+.footer p{
+    color: #fff;
+    font-size: 19px;
+}
+
+/* **************Scroll************** */
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    padding: 25px;
+    border-radius: 6px;
+  }
+
+
+.scroll i{
+      font-size: 25px;
+  }
+
+#myBtn:hover {
+    background-color: green;
+    box-shadow: -2px 2px 10px blue;
+  }
